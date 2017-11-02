@@ -1,16 +1,9 @@
-// instead of passing manny parameters (x, y, z, q, ,d, e...):
-var Point = /** @class */ (function () {
-    function Point() {
-    }
-    Point.prototype.draw = function () {
-        console.log('X: ' + this.x + 'Y: ' + this.y);
-    };
-    Point.prototype.getDistance = function (another) {
-        // ...
-    };
-    return Point;
-}());
-var point = new Point();
-point.x = 1;
-point.y = 2;
-point.draw();
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var like_component_1 = require("./like.component");
+// create instance of this class:
+var component = new like_component_1.LikeComponent(10, true);
+// this example it has 10 likes to start, and like has already been clicked
+// call the onClick function
+component.onClick();
+console.log("likesCount: " + component.likesCount + ", isSelected: " + component.isSelected);
