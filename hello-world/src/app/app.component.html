@@ -1,3 +1,7 @@
-<!-- <h1>Angular</h1> -->
-<!-- <courses></courses> -->
-<isFavorite></isFavorite>
+<favorite><span
+  class="glyphicon"
+  [class.glyphicon-star]="isFavorite"
+  [class.glyphicon-star-empty]="!isFavorite"
+  (click)="onClick()"
+  >
+</span></favorite>
