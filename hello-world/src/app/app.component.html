@@ -1,7 +1,1 @@
-<favorite><span
-  class="glyphicon"
-  [class.glyphicon-star]="isFavorite"
-  [class.glyphicon-star-empty]="!isFavorite"
-  (click)="onClick()"
-  >
-</span></favorite>
+<favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
