@@ -1,22 +1,6 @@
-<!-- <h4>Trying to add Panel</h4> -->
-<bootstrap-panel>
-  <!-- <div class="heading">Heading</div>
-    replaced with: -->
-  <ng-container class="heading">Heading</ng-container>
-  <!--
-  when you "inspect" this in the browser, it will now only say "Heading"
-  instead of  the whole
-  "<div _ngcontent-c0 class="heading">Heading</div>"   that would see in the browser inspect otherwise
-  -->
-  <div class="body">
-    <h2>Body</h2>
-    <p>Some content here...</p>
-  </div>
-</bootstrap-panel>
-
-
-<!-- <favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite> -->
-<tweetlikes
-  [isFavorite]="tweet.isFavorite"
-  [likesCount]="tweet.likesCount"
-></tweetlikes>
+<div *ngIf="courses.length > 0">
+  List of courses
+</div>
+<div *ngIf="courses.length == 0">
+  No courses yet
+</div>
