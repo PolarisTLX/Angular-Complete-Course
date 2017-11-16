@@ -1,0 +1,9 @@
+<span
+  class="glyphicon"
+  [class.glyphicon-heart]="isSelected"
+  [class.glyphicon-heart-empty]="!isSelected"
+  [style.color]="isSelected ? 'deeppink' : '#ccc'"
+  (click)="onClick()"
+  >
+</span>
+{{ likesCount }}

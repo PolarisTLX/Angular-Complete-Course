@@ -1,0 +1,39 @@
+<!--
+To get all of the below in online line type:
+div.panel.panel-default>div.panel-heading+div.panel-body
+then press TAB
+this gives:
+
+<div class="panel panel-default">
+  <div class="panel-heading"></div>
+  <div class="panel-body"></div>
+</div>
+
+-->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ng-content select=".heading"></ng-content>
+    <!-- the line above gets replaced with what is in app.component.html
+        which is:
+       <div class="heading">Heading</div>
+    -->
+  </div>
+  <div class="panel-body">
+    <ng-content select=".body"></ng-content>
+  </div>
+</div>
+
+<!--
+Previously this was:
+
+<div class="panel panel-default">
+  <div class="panel-heading">Heading</div>
+  <div class="panel-body">Body</div>
+</div>
+
+the <ng-content select=".body"></ng-content>
+allows you to build this stuff right in the file app.component.html
+
+Apparently you don't need "selector if there is only 1 ng-content element, but example above has 2"
+-->

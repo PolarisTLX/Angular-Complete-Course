@@ -1,3 +1,6 @@
+/*@import "~bootstrap/dist/css/bootstrap.css";*/
+/*line above is for ShadowDOM lecture*/
+
 .glyphicon {
   color: red;
 }
