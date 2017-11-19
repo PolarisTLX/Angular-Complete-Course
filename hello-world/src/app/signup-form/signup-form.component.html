@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="login()">
+<!-- "form" is the name of the object in signup-form.component.ts export-->
+  <div formGroupName="account">
+      <div class="form-group">
+          <label for="username">Username</label>
+          <!-- validators in reactive forms, don't use HTML5 validators like template driven forms do -->
+          <input
+              formControlName="username"
+              id="username"
+              type="text"
+              class="form-control"
+          >
+          <!-- load a message or image while we are waiting for response of an async result: -->
+          <div *ngIf="username.pending">Checking for uniqueness...</div>
+          <!-- <div *ngIf="form.get('username').touched && form.get('username').invalid" class="alert alert-danger">Username is required.</div> -->
+          <!-- simplified form.get('username') by setting it to a simpler vaiable in the .ts file -->
+          <div *ngIf="username.touched && username.invalid" class="alert alert-danger">
+              <div *ngIf="username.errors.required">Username is required.</div>
+              <div *ngIf="username.errors.minlength">Username should be at least {{ username.errors.minlength.requiredLength }} characters</div>
+              <div *ngIf="username.errors.cannotContainSpace">Username cannot contain space.</div>
+              <div *ngIf="username.errors.shouldBeUnique">That username is already taken.</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="password">Password</label>
+          <input
+              formControlName="password"
+              id="password"
+              type="text"
+              class="form-control">
+      </div>
+  </div>
+    <div *ngIf="form.errors" class="alert alert-danger">The username or password is invalid.</div>
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>

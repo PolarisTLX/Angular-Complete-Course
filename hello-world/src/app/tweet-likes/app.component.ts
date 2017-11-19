@@ -1,6 +1,6 @@
 // this file is in the wrong location, one folder too deep, just to preserve the lesson as a whole
 
-import { TweetLikesComponent } from './tweet-likes/tweet-likes.component';
+// import { TweetLikesComponent } from './tweet-likes/tweet-likes.component';
 import { Component } from '@angular/core';
 
 
@@ -15,4 +15,8 @@ export class AppComponent {
     isFavorite: false,
     likesCount: 41
   };
+
+  // Simpler example for just STYLE:
+  canSave = true;
+
 }

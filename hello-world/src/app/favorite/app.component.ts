@@ -1,6 +1,6 @@
 // this file is in the wrong location, one folder too deep, just to preserve the lesson as a whole
 
-import { FavoriteChangedEventArgs } from './favorite/favorite.component';
+// import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 import { Component } from '@angular/core';
 
 // interface FavoriteChangedEventArgs {
@@ -17,7 +17,7 @@ export class AppComponent {
     isFavorite: true
   };
 
-  onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
-    console.log('Favorite changed: ', eventArgs);
-  }
+  // onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
+  //   console.log('Favorite changed: ', eventArgs);
+  // }
 }
