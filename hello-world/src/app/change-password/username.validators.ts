@@ -1,3 +1,5 @@
+//  THIS FILE is not working with all the other files of this component
+
 import { AbstractControl, ValidationErrors } from '@angular/forms';
 
 export class UsernameValidators {
