@@ -13,6 +13,10 @@ import { ChangePasswordReactiveComponent } from './change-password-reactive/chan
 import { PostsComponent } from './posts/posts.component';
 import { HttpModule } from '@angular/http';
 import { PostService } from './services/post.service';
+import { ErrorHandler } from '@angular/core';
+import { AppErrorHandler } from './common/app.error.handler';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { GithubFollowersService } from './github-followers.service';
 
 
 @NgModule({
@@ -24,7 +28,8 @@ import { PostService } from './services/post.service';
     SignupFormComponent,
     NewCourseFormComponent,
     ChangePasswordReactiveComponent,
-    PostsComponent
+    PostsComponent,
+    GithubFollowersComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,10 @@ import { PostService } from './services/post.service';
     HttpModule
   ],
   providers: [
-    PostService
+    PostService,
+    GithubFollowersService,
+    { provide: ErrorHandler, useClass: AppErrorHandler }
+    // tells angular, that whereever you use ErrorHandler, instead use this class AppErrorHandler
   ],
   bootstrap: [AppComponent]
 })
